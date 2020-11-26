@@ -12,6 +12,10 @@ class TsubuyakisController < ApplicationController
     redirect_to new_tsubuyaki_path
   end
 
+  def show
+    @tsubuyaki = Tsubuyaki.find(params[:id])
+  end
+
   private
   def tsubuyaki_params
     params.require(:tsubuyaki).permit(:content)

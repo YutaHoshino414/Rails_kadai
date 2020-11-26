@@ -6,7 +6,7 @@
   <% @tsubuyakis.each do |tsubuyaki| %>
   <tr>
     <td><%= tsubuyaki.content %></td>
-    # <td><%= link_to '詳細を確認', tsubuyaki_path(tsubuyaki.id) %></td>
+    <td><%= link_to '詳細を確認', tsubuyaki_path(tsubuyaki.id) %></td>
     # <td><%= link_to '編集する', edit_tsubuyaki_path(tsubuyaki.id) %></td>
     # <td><%= link_to '削除する', tsubuyaki_path(tsubuyaki.id), method: :delete, data: {confirm: "本当に削除していいですか？"} %></td>
   </tr>
