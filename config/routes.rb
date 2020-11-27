@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  #get 'tsubuyakis/index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :tsubuyakis
+  resources :tsubuyakis do
+    collection do
+      post :confirm
+    end
+  end
 end
