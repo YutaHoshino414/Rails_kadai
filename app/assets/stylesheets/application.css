@@ -53,6 +53,7 @@ body{
 .header p{
   margin: 0;
   color: #fff;
+  float: right;
 }
 
 .footer{
