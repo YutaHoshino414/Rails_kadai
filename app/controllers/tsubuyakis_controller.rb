@@ -1,5 +1,5 @@
 class TsubuyakisController < ApplicationController
-  before_action :set_tsubuyaki, only: [:show, :edit, :update]
+  before_action :set_tsubuyaki, only: [:show, :edit, :update, :destroy]
   def index
     @tsubuyakis = Tsubuyaki.all
   end
@@ -18,11 +18,11 @@ class TsubuyakisController < ApplicationController
   end
 
   def edit
-    @tsubuyaki = Tsubuyaki.find(params[:id])
+    #@tsubuyaki = Tsubuyaki.find(params[:id])
   end
 
   def update
-    @tsubuyaki = Tsubuyaki.find(params[:id])
+    #@tsubuyaki = Tsubuyaki.find(params[:id])
     if @tsubuyaki.update(tsubuyaki_params)
       redirect_to tsubuyakis_path, notice: "つぶやきを編集しました！"
     else
@@ -31,7 +31,12 @@ class TsubuyakisController < ApplicationController
   end
 
   def show
-    @tsubuyaki = Tsubuyaki.find(params[:id])
+    #@tsubuyaki = Tsubuyaki.find(params[:id])
+  end
+
+  def destroy
+    @tsubuyaki.destroy
+    redirect_to tsubuyakis_path, notice:"つぶやきを削除しました！"
   end
 
   private
